@@ -11,6 +11,8 @@ def input_file(txt):
             for i in range(2, len(x), 2):
                 child = x[i]
                 dist = int(x[i + 1])
+                # print(dist)
+                # print(child)
                 lst_data.append((child, dist))
             dict[node] = {
                 "heru": heru,
@@ -34,8 +36,10 @@ def algorithm_part(dict, start, end):
             return path, g
         for child, dist in dict[current_node]["lst_data"]:
 
+
             g_new = g + dist
             heru_new = dict[child]["heru"]
+            
             f_new = g_new + heru_new
 
 
